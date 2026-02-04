@@ -17,6 +17,11 @@ const playlist = [
             id: 3,
             title: "Piano Sonata No. 10",
             artist: "Beethoven",
+        },
+        {
+            id: 4,
+            title: "Underwater Waltz",
+            artist: "Alec Holowka",
         }
     ];
 
