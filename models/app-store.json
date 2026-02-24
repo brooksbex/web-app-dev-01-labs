@@ -1,0 +1,17 @@
+{
+    "info": {
+        "appTitle": "Playlist Maker",
+        "version": 0.2,
+        "creators": [
+            {
+                "name": "Beckett Brooks",
+                "role": "Web Developer"
+            },
+            {
+                "name": "Ann Other",
+                "role": "Web Developer"
+            }
+        ],
+        "location": "Waterford"
+    }
+}

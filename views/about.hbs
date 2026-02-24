@@ -1,0 +1,29 @@
+{{> menu id="about"}}
+
+<section class="ui left aligned middle aligned segment">
+    <h2>About the Playlist App</h2>
+    <p>
+        More information about the app.
+    </p>
+
+    <div class="ui centered card">
+        <div class="image">
+            <img src={{info.image}}>
+        </div>
+        <div class="content">
+            <a class="header">{{info.fullname}}</a>
+            <div class="meta">
+                <span class="date">Joined in {{info.joined}}</span>
+            </div>
+            <div class="description">
+                {{info.name}} is a {{info.job}} living in {{info.city}}.
+            </div>
+        </div>
+        <div class="extra content">
+            <a>
+                <i class="user icon"></i>
+                {{info.mates}} contacts
+            </a>
+        </div>
+    </div>
+</section>
