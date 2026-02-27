@@ -6,24 +6,26 @@
         More information about the app.
     </p>
 
+    {{#with emps}}
     <div class="ui centered card">
         <div class="image">
-            <img src={{info.image}}>
+            <img src={{image}}>
         </div>
         <div class="content">
-            <a class="header">{{info.fullname}}</a>
+            <a class="header">{{fullname}}</a>
             <div class="meta">
-                <span class="date">Joined in {{info.joined}}</span>
+                <span class="date">Joined in {{joined}}</span>
             </div>
             <div class="description">
-                {{info.name}} is a {{info.job}} living in {{info.city}}.
+                {{name}} is a {{job}} living in {{city}}.
             </div>
         </div>
         <div class="extra content">
             <a>
                 <i class="user icon"></i>
-                {{info.mates}} contacts
+                {{mates}} contacts
             </a>
         </div>
     </div>
+    {{/with}}
 </section>
