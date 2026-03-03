@@ -12,7 +12,7 @@ import playlistStore from '../models/playlist-store.js';
                 playlists: playlistStore.getAllPlaylists()
             };
 
-            logger.debug(viewData.playlists);
+            //logger.debug(viewData.playlists);
             response.render('dashboard', viewData);
         },
     };

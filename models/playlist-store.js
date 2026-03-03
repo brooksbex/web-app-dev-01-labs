@@ -15,6 +15,7 @@ const playlistStore = {
     getPlaylist(id) {
         //logger.debug(this.store.findAll(this.collection).data[this.collection].filter((playlist => playlist.id === id)));
         //logger.debug(this.getAllPlaylists());
+        logger.debug(id);
         return this.store.findOneBy(this.collection, (playlist => playlist.id === id));
     },
 
