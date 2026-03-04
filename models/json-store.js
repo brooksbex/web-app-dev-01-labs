@@ -18,8 +18,8 @@ class JsonStore {
         return results;
     }
 
-    findOneBy(collection, filter){
-        const results = this.findBy.data[collection].filter(filter);
+     findOneBy(collection, filter) {
+        const results = this.db.data[collection].filter(filter);
         return results[0];
     }
 
