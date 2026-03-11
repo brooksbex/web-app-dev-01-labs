@@ -17,4 +17,10 @@ router.get('/playlist/:id', playlist.createView)
 
 router.get('/error', (request, response) => response.status(404).end('Page not found'));
 
+router.post('/playlist/:id/addsong', playlist.addSong)
+router.get('/playlist/:id/deletesong/:songid', playlist.deleteSong);
+
+router.post('/dashboard/addplaylist', dashboard.addPlaylist);
+router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
+
 export default router;
