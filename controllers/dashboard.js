@@ -18,9 +18,13 @@ import playlistStore from '../models/playlist-store.js';
         },
 
         addPlaylist(request, response){
+            const timestamp = new Date();
+
             const newPlaylist = {
                 id: uuidv4(),
                 title: request.body.title,
+                rating: parseInt(request.body.rating),
+                date: timestamp,
                 songs: [],
             };
             playlistStore.addPlaylist(newPlaylist);

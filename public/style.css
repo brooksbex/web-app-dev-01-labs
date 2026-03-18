@@ -12,3 +12,12 @@ body {
     margin: 2em;
     background-color: lightgray;
 }
+
+.editSubmit {
+  border:none;
+  background: none;
+}
+
+.hide{
+    display: none;
+}

@@ -15,12 +15,16 @@ const playlistStore = {
     getPlaylist(id) {
         //logger.debug(this.store.findAll(this.collection).data[this.collection].filter((playlist => playlist.id === id)));
         //logger.debug(this.getAllPlaylists());
-        logger.debug(id);
+        //logger.debug(id);
         return this.store.findOneBy(this.collection, (playlist => playlist.id === id));
     },
 
     addSong(id, song){
         this.store.addItem(this.collection, id, this.array, song);
+    },
+
+    editSong(id, songId, updatedSong){
+        this.store.editItem(this.collection, id, songId, this.array, updatedSong);
     },
 
     removeSong(id, songId) {
