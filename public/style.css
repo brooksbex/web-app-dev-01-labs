@@ -13,6 +13,10 @@ body {
     background-color: lightgray;
 }
 
+table {
+  margin:auto
+}
+
 .editSubmit {
   border:none;
   background: none;
