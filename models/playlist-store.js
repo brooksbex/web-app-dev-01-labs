@@ -37,6 +37,10 @@ const playlistStore = {
 
     removePlaylist(id){
         this.store.removeCollection(this.collection, this.getPlaylist(id));
+    },
+
+    searchPlaylist(search){
+        return this.store.findBy(this.collection, (playlist => playlist.title.toLowerCase().includes(search.toLowerCase())))
     }
 
 };
