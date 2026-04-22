@@ -31,12 +31,31 @@ const playlistStore = {
         this.store.removeItem(this.collection, id, this.array, songId);
     },
 
-    addPlaylist(playlist){
-        this.store.addCollection(this.collection, playlist);
+    async addPlaylist(playlist, file, response){
+        try {
+            playlist.picture = await this.store.addToCloudinary(file);
+            this.store.addCollection(this.collection, playlist);
+            response();
+        } catch (err) {
+            logger.error("Error processing playlist:", err);
+            response(err);
+        }
     },
 
-    removePlaylist(id){
-        this.store.removeCollection(this.collection, this.getPlaylist(id));
+    async removePlaylist(id, response){
+        const playlist= this.getPlaylist(id);
+
+        if(playlist.picture && playlist.picture.public_id){
+            try {
+                await this.store.deleteFromCloudinary(playlist.picture.public_id);
+                logger.info("Cloudinary image deleted");
+            } catch(err){
+                logger.error("Failed to delete Cloudinary image:", err);
+            }
+        }
+
+        this.store.removeCollection(this.collection, playlist);
+        response();
     },
 
     searchPlaylist(search){
